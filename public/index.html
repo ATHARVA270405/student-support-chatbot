@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Support Chatbot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Study Desk</h1>
+      <p>Ask about a concept, a bug, a lab or your revision plan.</p>
+    </header>
+
+    <section id="chat" class="chat" aria-live="polite" aria-label="Conversation">
+      <div class="empty" id="empty">
+        <p class="empty-title">What are you working on?</p>
+        <div class="chips">
+          <button class="chip" type="button">Explain recursion with an example</button>
+          <button class="chip" type="button">Make a 7-day plan for DBMS exam</button>
+          <button class="chip" type="button">Why is my Python loop printing None?</button>
+          <button class="chip" type="button">How do I prepare for placements?</button>
+        </div>
+      </div>
+    </section>
+
+    <form id="form" class="composer" autocomplete="off">
+      <textarea id="input" rows="1" maxlength="1000" placeholder="Type your question…" aria-label="Your question"></textarea>
+      <button id="send" type="submit">Send</button>
+    </form>
+    <button id="clear" class="clear" type="button">Clear chat</button>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
